@@ -1,88 +1,94 @@
-<nav>
-  <!--logo-->
-  <a href="#home" du-smooth-scroll offset="150" duration="750">
-    <div class="logo">
-      <p><b>LISA BLANNING</b></p>
-    </div>
-  </a>
-
-  <!--actual nav-->
-  <div class="link-bar">
-    <ul>
-        <li><a href="#words" du-smooth-scroll duration="750">FEATURES</a></li>
-        <li><a href="#activity" du-smooth-scroll duration="750">ACTIVITIES</a></li>
-        <li><a href="#contact" du-smooth-scroll duration="750">CONTACT</a></li>
-    </ul>
-  </div>
-</nav>
-
-
-
-
-<!--header-->
-<header id="home">
-  <img id="test" src="images/lisa-blanning.jpg" /><br /><br />
-  <p><i>Freelance Editor, Writer and Selector</i></p>
-  <big><b>Berlin // London // Florida</b></big>
-</header>
-
-
-
-
-<!--section title-->
-<a id="words" />
-<div class="image-box"> <!--MAIN IMAGE-->
-  <h2> SELECTED FEATURES &amp; REVIEWS</h2>
-  <p>for Taz, Resident Advisor, The FADER, Electronic Beats, Pitchfork, Red Bull Music Academy, and The Wire</p>
-  <hr />
-</div>
-
-
-<!--articles-->
-<section class="container centered clearfix">
-  <div class="box col3" ng-repeat="article in articles | orderBy:rowNumber:reverse">
-    <img ng-src="{{article.imagelink}}" alt="{{article.description}}" />
-    <a ng-href="{{article.link}}" target="blank" class="blurbs">
-      <p>{{article.description}}</p>
-    </a>
-  </div>
+<section class="loading" ng-show="!ready">
+  <h1 class="fa fa-circle-o-notch fa-spin"></h1>
 </section>
 
-
-
-
-
-<!--section header-->
-<a id="activity" />
-<div class="activity-box">
-  <h2>A BRIEF HISTORY OF ACTIVITIES</h2>
-  <hr />
-</div>
-
-
-
-<!--activity list-->
-<div class="info-list">
-  <ul>
-    <a ng-repeat="activity in activities" ng-href="{{activity.link}}" target="blank">
-      <li>
-        <p><strong>{{trust(activity.title)}}</strong><br />{{trust(activity.dateorinfo)}}</p>
-      </li>
+<section class="wrapper" ng-show="ready">
+  <nav>
+    <!--logo-->
+    <a href="#home" du-smooth-scroll offset="150" duration="750">
+      <div class="logo">
+        <p><b>LISA BLANNING</b></p>
+      </div>
     </a>
-  </ul>
-</div>
+
+    <!--actual nav-->
+    <div class="link-bar">
+      <ul>
+          <li><a href="#words" du-smooth-scroll duration="750">FEATURES</a></li>
+          <li><a href="#activity" du-smooth-scroll duration="750">ACTIVITIES</a></li>
+          <li><a href="#contact" du-smooth-scroll duration="750">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
 
 
-<!--contact shit-->
-<a id="contact" />
-<div class="image-box">
-  <h2>CONTACT</h2>
-  <hr />
-</div>
 
 
-<div class="final">
-  <div class="final-text">
-    <p><a href="mailto:lisa@lisablanning.com?subject=Site Missive">MAIL</a>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/lisablanning" target="blank">TWITTER</a></p>
+  <!--header-->
+  <header id="home">
+    <img id="test" src="images/lisa-blanning.jpg" /><br /><br />
+    <p><i>Freelance Editor, Writer and Selector</i></p>
+    <big><b>Berlin // London // Florida</b></big>
+  </header>
+
+
+
+
+  <!--section title-->
+  <a id="words" />
+  <div class="image-box"> <!--MAIN IMAGE-->
+    <h2> SELECTED FEATURES &amp; REVIEWS</h2>
+    <p>for Taz, Resident Advisor, The FADER, Electronic Beats, Pitchfork, Red Bull Music Academy, and The Wire</p>
+    <hr />
   </div>
-</div>
+
+
+  <!--articles-->
+  <section class="container centered clearfix">
+    <div class="box col3" ng-repeat="article in articles | orderBy:rowNumber:reverse">
+      <img ng-src="{{article.imagelink}}" alt="{{article.description}}" />
+      <a ng-href="{{article.link}}" target="blank" class="blurbs">
+        <p>{{article.description}}</p>
+      </a>
+    </div>
+  </section>
+
+
+
+
+
+  <!--section header-->
+  <a id="activity" />
+  <div class="activity-box">
+    <h2>A BRIEF HISTORY OF ACTIVITIES</h2>
+    <hr />
+  </div>
+
+
+
+  <!--activity list-->
+  <div class="info-list">
+    <ul>
+      <a ng-repeat="activity in activities" ng-href="{{activity.link}}" target="blank">
+        <li>
+          <p><strong>{{trust(activity.title)}}</strong><br />{{trust(activity.dateorinfo)}}</p>
+        </li>
+      </a>
+    </ul>
+  </div>
+
+
+  <!--contact shit-->
+  <a id="contact" />
+  <div class="image-box">
+    <h2>CONTACT</h2>
+    <hr />
+  </div>
+
+
+  <div class="final">
+    <div class="final-text">
+      <p><a href="mailto:lisa@lisablanning.com?subject=Site Missive">MAIL</a>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/lisablanning" target="blank">TWITTER</a></p>
+    </div>
+  </div>
+</section>

@@ -1,10 +1,12 @@
 <nav>
+  <!--logo-->
   <a href="#home" du-smooth-scroll offset="150" duration="750">
     <div class="logo">
       <p><b>LISA BLANNING</b></p>
     </div>
   </a>
 
+  <!--actual nav-->
   <div class="link-bar">
     <ul>
         <li><a href="#words" du-smooth-scroll duration="750">FEATURES</a></li>
@@ -15,6 +17,9 @@
 </nav>
 
 
+
+
+<!--header-->
 <header id="home">
   <img id="test" src="images/lisa-blanning.jpg" /><br /><br />
   <p><i>Freelance Editor, Writer and Selector</i></p>
@@ -22,88 +27,62 @@
 </header>
 
 
-<!--*************************FEATURE ARTICLE TITLE*******************************-->
+
+
+<!--section title-->
 <a id="words" />
 <div class="image-box"> <!--MAIN IMAGE-->
   <h2> SELECTED FEATURES &amp; REVIEWS</h2>
   <p>for Taz, Resident Advisor, The FADER, Electronic Beats, Pitchfork, Red Bull Music Academy, and The Wire</p>
   <hr />
-</div> <!--END IMAGE-->
+</div>
 
 
-
-<!--***************************FEATURE ARTICLE GRID************************************-->
-
+<!--articles-->
 <section class="container centered clearfix">
-
   <div class="box col3" ng-repeat="article in articles | orderBy:rowNumber:reverse">
     <img ng-src="{{article.imagelink}}" alt="{{article.description}}" />
     <a ng-href="{{article.link}}" target="blank" class="blurbs">
       <p>{{article.description}}</p>
     </a>
   </div>
-
 </section>
 
 
 
 
 
-<!--*************************FEATURE ARTICLE TITLE*******************************-->
+<!--section header-->
 <a id="activity" />
-<div class="image-box"> <!--MAIN IMAGE-->
+<div class="activity-box">
   <h2>A BRIEF HISTORY OF ACTIVITIES</h2>
   <hr />
-</div> <!--END IMAGE-->
+</div>
 
 
 
-<!--***************************INFO LIST************************************-->
-
+<!--activity list-->
 <div class="info-list">
   <ul>
-    <a href="http://reboot.fm/category/musik-magazin/saturnalien/" target="blank"><li><p><b>Reboot FM, Saturnalien show</b><br /> 2014 - present</p></li></a>
-
-    <a href="http://www.electronicbeats.net/author/lisa-blanning/" target="blank"><li><p><b>Online Editor, Electronic Beats</b><br /> 2013 - 2014</p></li></a>
-
-    <a href="http://www.redbullmusicacademy.com/" target="blank"><li><p><b>Online Editor, Red Bull Music Academy</b><br /> 2012 - 2013</p></li></a>
-
-    <a href="http://thewire.co.uk/archive/contributors/lisa-blanning" target="blank"><li><p><b>News, Live Editor/Listings Editor/Special Events/Contributor, The Wire</b><br /> 2006 - 2012</p></li></a>
-
-    <a href="http://www.electronicbeats.net/2013/03/11/the-death-of-rave-panel-discussions-from-ctm-13/" target="blank"><li><p><b>Moderator – CTM.13: Death Of Rave (UK Edition)</b> with panelists Steve
-              Goodman (Kode9), Lee Gamble, Mark Fisher (K-Punk), Alex Williams, 2013</p></li></a>
-
-    <a href="https://soundcloud.com/boom_tschak/sets/critical-beats-3" target="blank"><li><p><b>Panelist – Critical Beats #3: Aesthetics, Innovation And Tradition</b>
-              with panelists Simon Reynolds, Joe Muggs and moderator Steve Goodman <br />
-              (Kode9), 2012</p></li></a>
-
-    <a href="http://thewire.co.uk/audio/on-air/critical-beats_1_sound_technology-and-microgenres" target="blank"><li><p><b>Moderator – Critical Beats #1: Sound, Technology And Microgenres</b> with
-              panelists Adam Harper (Rouge's Foam), Matthew Ingram (Woebot), Mike
-              Paradinas (mu-ziq), 2011</p></li></a>
-
-    <a href="http://www.incubate.org/2013/" target="blank"><li><p><b>Panelist – Incubate Festival: Independent Media and DIY Press, 2011</b></p></li></a>
-
-    <a href="https://vimeo.com/16485036" target="blank"><li><p><b>Talking Head, <i>Future Sound</i> documentary, 2010</b></p></li></a>
-
+    <a ng-repeat="activity in activities" ng-href="{{activity.link}}" target="blank">
+      <li>
+        <p><strong>{{trust(activity.title)}}</strong><br />{{trust(activity.dateorinfo)}}</p>
+      </li>
+    </a>
   </ul>
+</div>
 
-</div> <!--End Info List-->
 
-      
-
-<!--*************************GET AT ME*******************************-->
+<!--contact shit-->
 <a id="contact" />
-<div class="image-box"> <!--MAIN IMAGE-->
-
+<div class="image-box">
   <h2>CONTACT</h2>
   <hr />
-
-  </div> <!--END IMAGE-->
-
+</div>
 
 
-  <div class="final">
-    <div class="final-text">
-      <p><a href="mailto:lisa@lisablanning.com?subject=Site Missive">MAIL</a>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/lisablanning" target="blank">TWITTER</a></p>
-    </div><!--END FINAL TEXT-->
-</div><!--END FINAL-->
+<div class="final">
+  <div class="final-text">
+    <p><a href="mailto:lisa@lisablanning.com?subject=Site Missive">MAIL</a>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/lisablanning" target="blank">TWITTER</a></p>
+  </div>
+</div>

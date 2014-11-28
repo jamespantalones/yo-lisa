@@ -17,6 +17,13 @@ body {
 	font-family:"Apercu Pro Regular", 'Trebuchet MS', Arial, sans-serif; 
 }
 
+img { 
+	border: 0; 
+	-ms-interpolation-mode: bicubic; 
+	vertical-align: middle; 
+}
+
+
 p{
 	color: black;
 }
@@ -78,3 +85,9 @@ header{
 		@include transition(all 0.4s ease-in-out);
 	}
 }
+
+
+/**** Clearfix ****/
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }

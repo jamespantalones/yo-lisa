@@ -44,12 +44,17 @@
 
   <!--articles-->
   <div class="feature-container centered">
-    <div class="box col" ng-repeat="article in articles | orderBy:rowNumber:reverse">
-      <img ng-src="{{article.imagelink}}" alt="{{article.description}}" />
-      <a ng-href="{{article.link}}" target="blank" class="blurbs">
-        <p>{{article.description}}</p>
-      </a>
-    </div>
+    <ul class="rig">
+      <li ng-repeat="article in articles | orderBy:rowNumber:reverse">
+        <div class="feature-image" style="background:url({{article.imagelink}})"></div>
+        <div class="blurbs">
+          <a ng-href="{{article.link}}" target="blank">
+            <p>{{article.description}}</p>
+          </a>
+        </div>
+        <!-- <img ng-src="{{article.imagelink}}" alt="{{article.description}}" /> -->
+      </li>
+    </ul>
   </div>
 </section>
 

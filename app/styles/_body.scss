@@ -3,6 +3,7 @@
 	max-width: 100%;
 	height: 100%;
 	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
 }
 
 .header-wrap{
@@ -18,6 +19,15 @@ header{
 	height: 100%;
 	width: 100%;
 	z-index: 2;
+	@media (max-width: $tab){
+		margin-top: 40%;
+		@media (orientation: landscape){
+			margin-top: 20%;
+		}
+	}
+	@media (max-width: $phone){
+		margin-top: 30%;
+	}
 	p{
 		font-size: 0.9em;
 		&.byline{
@@ -32,26 +42,40 @@ header{
 		height: auto;
 		text-align: center;
 		@include transition(all 0.2s ease-in-out);
+		-webkit-backface-visibility: hidden;
 		&:hover{
 			@include transform(rotate(1deg));
+		}
+		@media (max-width: $tab){
+			width: 35%;
+			@media (orientation: landscape){
+				width: 20%;
+			}
+		}
+		@media (max-width: $phone){
+			width: 50%;
+		}
+
+		@media (max-width: $mini){
+			width: 50%;
 		}
 	}
 }
 
 
-.features{
+.features, .activities, .contact{
 	position: relative;
-	left: 0;
-	width: 100%;
 	margin-top: 12.5%;
-	height: auto;
 }
 
-.activities{
-	position: relative;
-	margin-top: 200%;
+.features{
+	@media (max-width: $tab){
+		margin-top: 40%;
+	}
+	@media (max-width: $mini){
+		margin-top: 50%;
+	}
 }
-
 
 
 
@@ -65,6 +89,9 @@ header{
 	}
 }
 
+
+
+
 .feature-container {
 	background: transparent;
 	@include border-top-radius(10px);
@@ -76,13 +103,12 @@ header{
 	margin: 0 auto; 
 	text-align: center;
 	
-
-
 	ul.rig{
 		list-style-type: none;
 		padding: 0;
+		width: 90%;
+		margin-left: 5%;
 		li{
-			background-color: blue;
 			width: 23%;
 			height: 0;
 			padding-bottom: 23%;
@@ -91,6 +117,23 @@ header{
 			display: inline-block;
 			position: relative;
 			text-align: center;
+			&:first-child{
+				margin-left: 0;
+			}
+			@media (max-width: 1150px){
+				width: 31%;
+				padding-bottom: 31%;
+			}
+
+			@media (max-width: $tab){
+				width: 47%;
+				padding-bottom: 47%;
+			}
+			@media (max-width: $phone){
+				width: 80%;
+				padding-bottom: 80%;
+			}
+
 			&:hover{
 				.blurbs{
 					opacity: 1;
@@ -128,69 +171,14 @@ header{
 			}
 		}
 	}
-	// .box {
-	// 	margin: 3px;
-	//   	padding: 3px;
-	//   	background: $whitegray;
-	//   	display: inline-block;
-	//   	position: relative;
-	//   	&:hover{
-	//   		.blurbs{
-	//   			display: block;
-	//   		}
-	//   	}
-	//   	a{
-	//   		img{
-	//   			&:hover{
-	//   				opacity: 0.9;
-	//   			}
-	//   		}
-	//   	}
-	//   	.blurbs{
-	//   		@include transition(all .2s ease-in-out);
-	// 		background-color: black;
-	// 		z-index: 2;
-	// 		color: white;
-	// 		width: 100%;
-	// 		height: 100%;
-	// 		position: absolute;
-	// 		top: 0;
-	// 		left: 0;
-	// 		display: none;
-	// 		opacity: 0.8;
-	// 		font-style: italic;
-	// 		text-decoration: none;
-	// 		p{
-	// 			text-align: center;
-	// 			color: white;
-	// 			font-size: 1em;
-	// 			line-height: 1.5em;
-	// 			margin-top: 5%;
-	// 			padding-left: 5px;
-	// 			padding-right: 5px;
-	// 			font-weight: lighter;
-	// 		}
-	// 	}
-	// }
-
-	// .col{ 
-	// 	width: 23%;
-	// 	padding-bottom: 23%;
-	// 	margin: 20px 2% 0 0;
-	// 	height: 250px;
-	// 	text-align: center;
-	// 	overflow: hidden;
-	// 	img{
-	// 		height: 100%;
-	// 		max-height: 100%;
-	// 		width: auto;
-	// 	}
-	// }
 }
 
+
+
+
+
+
 .activity-list{
-	top: 0;
-	left: 0;
 	position: relative;
 	width: 90%;
 	height: auto;
@@ -218,37 +206,26 @@ header{
 	}
 }
 
+
+
+
+
 footer{
 	margin: 0 auto 8% auto;
 	width: 90%;
 	height: 75px;
-	background-image: url(../images/red-purple-background.jpg);
-	background-position: center;
-	opacity: 0.95;
-	img{
-		overflow: hidden;
+	ul{
+		padding: 0;
+		list-style-type: none;
+		li{
+			display: inline-block;
+			font-size: 3em;
+			margin: 2px 10px;
+			&:hover{
+				@include transform(scale(1.1));
+			}
+		}
 	}
 }
 
-
-.final-text {
-	width: 100%;
-	p,a{
-		text-align: center;
-		font-size: 1.5em;
-		line-height: 75px;
-		vertical-align: middle;
-		color: black;
-		font-weight: bold;
-		text-decoration: none;
-		@include transition(all .3s ease-in-out);
-	}
-	a{
-		padding: 5px 10px;
-	}
-	a:hover{
-		background-color: black;
-		color: white;
-	}
-}
 

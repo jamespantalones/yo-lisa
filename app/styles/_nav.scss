@@ -36,6 +36,9 @@ nav {
 				}
 			}
 		}
+		@media (max-width: $phone){
+			display: none;
+		}
 	}
 }
 

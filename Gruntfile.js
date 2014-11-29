@@ -201,7 +201,7 @@ module.exports = function (grunt) {
       }
     },
 
-      //AWS
+    //AWS
     aws: grunt.file.readJSON('env.json'),
 
     s3: {

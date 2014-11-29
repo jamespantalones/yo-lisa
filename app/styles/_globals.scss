@@ -45,12 +45,18 @@ strong{
 
 /* All Headings */
 h1, h2, h3, h4, h5, h6 {
-	font-family:'Karla', 'Trebuchet MS', Arial, sans-serif; 
+	font-family:'Karla', 'Trebuchet MS', Arial, sans-serif;
+	line-height: 1;
+	margin-bottom: 0;
 }
 
 /* Individual Headings */
 h2 {
-	font-size: 4em;
+	font-size: 3em;
+	line-height: 0.9;
+	@media (max-width: $mini){
+		font-size: 2em;
+	}
 }
 
 h3{

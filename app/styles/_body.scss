@@ -27,6 +27,12 @@ header{
 	}
 	@media (max-width: $phone){
 		margin-top: 30%;
+		@media (orientation: landscape){
+			margin-top: 10%;
+		}
+	}
+	@media (max-width: $mini){
+		margin-top: 35%;
 	}
 	p{
 		font-size: 0.9em;
@@ -54,6 +60,9 @@ header{
 		}
 		@media (max-width: $phone){
 			width: 50%;
+			@media (orientation: landscape){
+				width: 20%;
+			}
 		}
 
 		@media (max-width: $mini){
@@ -71,9 +80,18 @@ header{
 .features{
 	@media (max-width: $tab){
 		margin-top: 40%;
+		@media (orientation: landscape){
+			margin-top: 25%;
+		}
+	}
+	@media (max-width: 667px){
+		margin-top: 55%;
+		@media (orientation: landscape){
+			margin-top: 15%;
+		}
 	}
 	@media (max-width: $mini){
-		margin-top: 50%;
+		margin-top: 60%;
 	}
 }
 
@@ -82,11 +100,6 @@ header{
 .activity-box, .feature-box, .contact-box{
 	margin: 0 5% 0 5%;
 	width: 90%;
-	h2{
-		line-height: 1;
-		font-size: 3em;
-		margin-bottom: 0;
-	}
 }
 
 
@@ -108,65 +121,107 @@ header{
 		padding: 0;
 		width: 90%;
 		margin-left: 5%;
-		li{
-			width: 23%;
-			height: 0;
-			padding-bottom: 23%;
-			margin: 20px 1% 0 1%;
-			overflow: hidden;
-			display: inline-block;
-			position: relative;
-			text-align: center;
-			&:first-child{
-				margin-left: 0;
+		&.desktop{
+			@media (max-device-width: $tab){
+				display: none;
 			}
-			@media (max-width: 1150px){
-				width: 31%;
-				padding-bottom: 31%;
-			}
+			li{
+				width: 23%;
+				height: 0;
+				padding-bottom: 23%;
+				margin: 20px 1% 0 1%;
+				overflow: hidden;
+				display: inline-block;
+				position: relative;
+				text-align: center;
+				&:first-child{
+					margin-left: 0;
+				}
+				@media (max-width: 1150px){
+					width: 31%;
+					padding-bottom: 31%;
+				}
 
-			@media (max-width: $tab){
-				width: 47%;
-				padding-bottom: 47%;
-			}
-			@media (max-width: $phone){
-				width: 80%;
-				padding-bottom: 80%;
-			}
+				@media (max-width: $tab){
+					width: 47%;
+					padding-bottom: 47%;
+				}
+				@media (max-width: $phone){
+					width: 80%;
+					padding-bottom: 80%;
+					@media (orientation: landscape){
+						width: 50%;
+						padding-bottom: 50%;
+					}
+				}
 
-			&:hover{
+				&:hover{
+					.blurbs{
+						opacity: 1;
+					}
+				}
+				.feature-image{
+					display: block;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					position: absolute;
+					background-size: contain !important;
+					background-repeat: no-repeat !important;
+				}
 				.blurbs{
-					opacity: 1;
+					opacity: 0;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					position: absolute;
+					z-index: 3;
+					background-color: rgba(0,0,0,0.8);
+					@include transition(all .1s linear);
+					a,p{
+						color: white;
+						font-family: Georgia, Times, serif;
+						font-style: italic;
+						font-weight: lighter;
+						padding: 10px;
+						margin-top: 40px;
+						line-height: 1.5;
+					}
 				}
 			}
-			.feature-image{
+
+		}
+		&.mobile{
+			display: none;
+			@media (max-device-width: $tab){
 				display: block;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				position: absolute;
-				background-size: contain !important;
-				background-repeat: no-repeat !important;
 			}
-			.blurbs{
-				opacity: 0;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				position: absolute;
-				z-index: 3;
-				background-color: rgba(0,0,0,0.8);
-				@include transition(all .1s linear);
-				a,p{
-					color: white;
-					font-family: Georgia, Times, serif;
-					font-style: italic;
-					font-weight: lighter;
-					padding: 10px;
-					margin-top: 40px;
-					line-height: 1.5;
+			li{
+				width: 90%;
+				margin: 20px 1% 0 1%;
+				display: inline-block;
+				position: relative;
+				overflow: hidden;
+				text-align: center;
+				background: $gray;
+				.feature-mobile{
+					width: 100%;
+					height: auto;
+					img{
+						max-width: 90%;
+						width: 90%;
+						height: auto;
+						padding-top: 5%;
+						background: $gray;
+					}
+					p{
+						width: 90%;
+						margin-left: 5%;
+						font-weight: bold;
+					}
+
 				}
 			}
 		}

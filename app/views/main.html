@@ -6,7 +6,6 @@
 
 <!--body wrapper-->
 <section class="wrapper" ng-show="ready">
-
   <nav>
     <div class="link-bar">
       <ul>
@@ -35,7 +34,7 @@
 
   <!--section title-->
   <section class="features">
-    <div id="features" class="feature-box"> <!--MAIN IMAGE-->
+    <div id="features" class="feature-box">
       <h2>{{globalData.featuretitle}}</h2>
       <p>{{globalData.featurebyline}}</p>
       <hr />
@@ -44,7 +43,8 @@
 
   <!--articles-->
   <div class="feature-container centered">
-    <ul class="rig">
+
+    <ul class="rig desktop">
       <li ng-repeat="article in articles | orderBy:rowNumber:reverse">
         <div class="feature-image" style="background:url({{article.imagelink}})"></div>
         <div class="blurbs">
@@ -52,9 +52,19 @@
             <p>{{article.description}}</p>
           </a>
         </div>
-        <!-- <img ng-src="{{article.imagelink}}" alt="{{article.description}}" /> -->
       </li>
     </ul>
+
+    <ul class="rig mobile">
+      <li ng-repeat="article in articles | orderBy:rowNumber:reverse">
+        <div class="feature-mobile">
+          <img ng-src="{{article.imagelink}}" alt="{{article.description}}" />
+          <p>{{article.description}}</p>
+        </div>
+      </li>
+    </ul>
+
+
   </div>
 </section>
 

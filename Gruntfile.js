@@ -201,6 +201,22 @@ module.exports = function (grunt) {
       }
     },
 
+      //AWS
+    aws: grunt.file.readJSON('env.json'),
+
+    s3: {
+      options:{
+        accessKeyId: '<%= aws.accessKeyId %>',
+        secretAccessKey: '<%= aws.secretAccessKey %>',
+        bucket: '<%= aws.bucket %>'
+      },
+
+      build:{
+        cwd: 'dist/',
+        src: '**'
+      }
+    },
+
     // Renames files for browser caching purposes
     filerev: {
       dist: {

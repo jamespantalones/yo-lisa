@@ -46,7 +46,9 @@
 
     <ul class="rig desktop">
       <li ng-repeat="article in articles | orderBy:rowNumber:reverse">
-        <div class="feature-image" style="background:url({{article.imagelink}})"></div>
+        <div class="feature-image">
+          <img ng-src="{{article.imagelink}}" alt="{{article.description}}" />
+        </div>
         <div class="blurbs">
           <a ng-href="{{article.link}}" target="blank">
             <p>{{article.description}}</p>

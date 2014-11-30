@@ -179,17 +179,26 @@ header{
 					z-index: 3;
 					background-color: $purpletrans;
 					@include transition(all .1s linear);
-					a,p{
-						color: white;
-						font-style: italic;
-						font-weight: bold;
-						padding: 10px;
-						margin-top: 40px;
-						line-height: 1.5;
+					.blurb-info-container{
+						width: 100%;
+						height: 100%;
+						position: relative;
+						.blurb-info{
+							position: absolute;
+							top: 50%;
+							left: 0;
+							@include transform(translate(0, -50%));
+							a,p{
+								color: white;
+								font-style: italic;
+								font-weight: bold;
+								padding: 0 20px;
+								line-height: 1.5;
+							}
+						}
 					}
 				}
 			}
-
 		}
 		&.mobile{
 			display: none;
@@ -254,6 +263,7 @@ header{
 			background-color: $gray;
 			margin-top: 10px;
 			padding: 0px 10px;
+			-webkit-backface-visibility: hidden;
 			@include smallboxy();
 			// box-shadow: 1px 3px 8px black;
 			@include transition(all .2s ease-in-out);

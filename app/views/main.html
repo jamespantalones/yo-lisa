@@ -54,9 +54,13 @@
             <img ng-src="{{article.imagelink}}" alt="{{article.description}}" />
           </div>
           <div class="blurbs">
-            <a ng-href="{{article.link}}" target="blank">
-              <p>{{article.description}}</p>
-            </a>
+            <div class="blurb-info-container">
+              <div class="blurb-info">
+                <a ng-href="{{article.link}}" target="blank">
+                  <p>{{article.description}}</p>
+                </a>
+              </div>
+            </div>
           </div>
         </li>
       </ul>

@@ -12,8 +12,10 @@
 <section class="wrapper" du-scroll-container ng-show="ready">
   <nav>
     <div class="link-bar">
+      <div class="logo">
+        <a href="#home" class="title" du-scrollspy du-smooth-scroll offset="300" duration="750">LISA BLANNING</a>
+      </div>
       <ul>
-        <li><a href="#home" class="title" du-scrollspy du-smooth-scroll offset="300" duration="750">LISA BLANNING</li></a>
         <li ng-repeat="item in navItems">
           <a ng-href="{{item.link}}" du-scrollspy du-smooth-scroll offset="100" duration="750">{{item.title}}</a>
         </li>

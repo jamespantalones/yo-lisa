@@ -8,12 +8,30 @@ nav {
 	position: fixed;
 	background: $main;
 	@include background(linear-gradient(rgba(255,252,244,1), rgba(255,252,244,0)));
+	.logo{
+		position: fixed;
+		top: 15px;
+		left: 20px;
+		font-weight: bold;
+		background: $purple;
+		padding: 10px;
+		@include smallboxy();
+		&:hover{
+			border-bottom: none;
+			@include transform(translateX(1px) translateY(1px));
+			box-shadow: 1px 1px 2px black;
+		}	
+	}
 	ul{
 		width: 100%;
+		text-align: center;
+		padding: 0;
+
 		li{
 			display: inline-block;
 			padding: 0 5%;
 			text-transform: uppercase;
+			margin-top: 10px;
 			a{
 				display: inline-block;
 				text-decoration: none;
@@ -24,18 +42,6 @@ nav {
 				text-align: center;
 				&:hover{
 					border-bottom: 3px solid black;
-				}
-				&.title{
-					font-weight: bold;
-					background: $purple;
-					padding: 10px;
-					@include smallboxy();
-					&:hover{
-						border-bottom: none;
-						@include transform(translateX(1px) translateY(1px));
-						box-shadow: 1px 1px 2px black;
-
-					}
 				}
 			}
 		}

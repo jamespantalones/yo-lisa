@@ -51,10 +51,12 @@ header{
 		width: 20%;
 		height: auto;
 		text-align: center;
+		box-shadow: 1px 3px 8px black;
 		@include transition(all 0.2s ease-in-out);
 		-webkit-backface-visibility: hidden;
 		&:hover{
-			@include transform(rotate(1deg));
+			@include transform(translateX(1px) translateY(1px));
+			box-shadow: 1px 1px 2px black;
 		}
 		@media (max-width: $tab){
 			width: 35%;
@@ -79,6 +81,9 @@ header{
 .features, .activities, .contact{
 	position: relative;
 	margin-top: 12.5%;
+	@media (max-width: $phone){
+		margin-top: 20%;
+	}
 }
 
 .features{
@@ -172,11 +177,12 @@ header{
 					left: 0;
 					position: absolute;
 					overflow: hidden;
+
 					img{
 						height: 100%;
 						max-height: 100%;
 						width: auto;
-					}
+											}
 				}
 				.blurbs{
 					opacity: 0;
@@ -214,6 +220,7 @@ header{
 				overflow: hidden;
 				text-align: center;
 				background: $gray;
+				box-shadow: 1px 3px 8px black;
 				.feature-mobile{
 					width: 100%;
 					height: auto;
@@ -257,13 +264,19 @@ header{
 			background-color: $gray;
 			margin-top: 10px;
 			padding: 1px 10px;
-			@include transition(all .2s ease-in-out);
+			box-shadow: 1px 3px 8px black;
+			@include transition(all .1s ease-in-out);
+			@media (max-width: $phone){
+				font-size: 1em;
+			}
 			strong{
 				font-weight: bold;
 			}
 			&:hover{
 				background-color: $purple;
 				color: black;
+				@include transform(translateX(1px) translateY(1px));
+				box-shadow: 1px 1px 2px black;
 			}
 		}
 	}

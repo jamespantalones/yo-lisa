@@ -45,7 +45,7 @@
   <div class="feature-container centered">
 
     <ul class="rig desktop">
-      <li ng-repeat="article in articles | orderBy:rowNumber:reverse">
+      <li ng-repeat="article in articles | orderBy:'rowNumber':'reverse'">
         <div class="feature-image">
           <img ng-src="{{article.imagelink}}" alt="{{article.description}}" />
         </div>
@@ -58,7 +58,7 @@
     </ul>
 
     <ul class="rig mobile">
-      <li ng-repeat="article in articles | orderBy:rowNumber:reverse">
+      <li ng-repeat="article in articles | orderBy:'rowNumber':'reverse'">
         <div class="feature-mobile">
           <img ng-src="{{article.imagelink}}" alt="{{article.description}}" />
           <p>{{article.description}}</p>

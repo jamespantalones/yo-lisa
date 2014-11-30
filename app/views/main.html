@@ -16,8 +16,17 @@
         <a href="#home" class="title" du-scrollspy du-smooth-scroll offset="300" duration="750">LISA BLANNING</a>
       </div>
       <ul>
+        <li>
+          <a href="#features" du-scrollspy du-smooth-scroll offset="100" duration="750">Features</a>
+        </li>
+        <li>
+          <a href="#activities" du-scrollspy du-smooth-scroll offset="100" duration="750">Activities</a>
+        </li>
+        <li>
+          <a href="#contact" du-scrollspy du-smooth-scroll offset="100" duration="750">Contact</a>
+        </li>
         <li ng-repeat="item in navItems">
-          <a ng-href="{{item.link}}" du-scrollspy du-smooth-scroll offset="100" duration="750">{{item.title}}</a>
+          <a ng-href="{{item.link}}" du-scrollspy du-smooth-scroll offset="100" duration="750" target="blank">{{item.title}}</a>
         </li>
       </ul>
     </div>

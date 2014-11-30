@@ -13,11 +13,13 @@
 .header-wrap{
 	width: 100%;
 	height: 100%;
-	position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
+
 header{
-	position: relative;
 	text-align: center;
 	margin-top: 10%;
 	height: 100%;
@@ -42,6 +44,7 @@ header{
 		font-size: 0.9em;
 		&.byline{
 			font-style: italic;
+			margin: 10px auto 0 auto;
 		}
 	}
 	big{
@@ -51,13 +54,7 @@ header{
 		width: 20%;
 		height: auto;
 		text-align: center;
-		box-shadow: 1px 3px 8px black;
-		@include transition(all 0.2s ease-in-out);
 		-webkit-backface-visibility: hidden;
-		&:hover{
-			@include transform(translateX(1px) translateY(1px));
-			box-shadow: 1px 1px 2px black;
-		}
 		@media (max-width: $tab){
 			width: 35%;
 			@media (orientation: landscape){
@@ -77,31 +74,22 @@ header{
 	}
 }
 
+.body-wrap{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+
 
 .features, .activities, .contact{
 	position: relative;
 	margin-top: 12.5%;
-	@media (max-width: $phone){
-		margin-top: 20%;
-	}
 }
 
 .features{
-	@media (max-width: $tab){
-		margin-top: 40%;
-		@media (orientation: landscape){
-			margin-top: 25%;
-		}
-	}
-	@media (max-width: 667px){
-		margin-top: 55%;
-		@media (orientation: landscape){
-			margin-top: 15%;
-		}
-	}
-	@media (max-width: $mini){
-		margin-top: 60%;
-	}
+	margin-top: 0;
 }
 
 
@@ -109,6 +97,9 @@ header{
 .activity-box, .feature-box, .contact-box{
 	margin: 0 5% 0 5%;
 	width: 90%;
+	p{
+		margin-top: 0;
+	}
 }
 
 
@@ -192,13 +183,12 @@ header{
 					left: 0;
 					position: absolute;
 					z-index: 3;
-					background-color: rgba(0,0,0,0.8);
+					background-color: $purpletrans;
 					@include transition(all .1s linear);
 					a,p{
 						color: white;
-						font-family: Georgia, Times, serif;
 						font-style: italic;
-						font-weight: lighter;
+						font-weight: bold;
 						padding: 10px;
 						margin-top: 40px;
 						line-height: 1.5;
@@ -263,11 +253,16 @@ header{
 			font-size: 1.5em;
 			background-color: $gray;
 			margin-top: 10px;
-			padding: 1px 10px;
-			box-shadow: 1px 3px 8px black;
-			@include transition(all .1s ease-in-out);
+			padding: 0px 10px;
+			@include smallboxy();
+			// box-shadow: 1px 3px 8px black;
+			@include transition(all .2s ease-in-out);
 			@media (max-width: $phone){
 				font-size: 1em;
+			}
+			p{
+				font-family: 'Trebuchet MS', 'Karla', Arial, sans-serif;
+				padding: 5px 0;
 			}
 			strong{
 				font-weight: bold;

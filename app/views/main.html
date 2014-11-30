@@ -31,91 +31,93 @@
 
 
 
+  <section class="body-wrap">
+    <!--section title-->
+    <section class="features" id="features">
+      <div class="feature-box">
+        <h2>{{globalData.featuretitle}}</h2>
+        <p>{{globalData.featurebyline}}</p>
+        <hr />
+      </div>
 
-  <!--section title-->
-  <section class="features" id="features">
-    <div class="feature-box">
-      <h2>{{globalData.featuretitle}}</h2>
-      <p>{{globalData.featurebyline}}</p>
-      <hr />
-    </div>
 
+    <!--articles-->
+    <div class="feature-container centered">
 
-  <!--articles-->
-  <div class="feature-container centered">
-
-    <ul class="rig desktop">
-      <li ng-repeat="article in articles | orderBy:'rowNumber':'reverse'">
-        <div class="feature-image">
-          <img ng-src="{{article.imagelink}}" alt="{{article.description}}" />
-        </div>
-        <div class="blurbs">
-          <a ng-href="{{article.link}}" target="blank">
-            <p>{{article.description}}</p>
-          </a>
-        </div>
-      </li>
-    </ul>
-
-    <ul class="rig mobile">
-      <li ng-repeat="article in articles | orderBy:'rowNumber':'reverse'">
-        <div class="feature-mobile">
-          <a ng-href="{{article.link}}" target="blank">
+      <ul class="rig desktop">
+        <li ng-repeat="article in articles | orderBy:'rowNumber':'reverse'">
+          <div class="feature-image">
             <img ng-src="{{article.imagelink}}" alt="{{article.description}}" />
-            <p>{{article.description}}</p>
-          </a>
-        </div>
-      </li>
-    </ul>
-
-
-  </div>
-</section>
-
-
-
-
-
-  <!--section header-->
-  <section class="activities">
-    <div class="activity-box" id="activities">
-      <h2>{{globalData.activitiestitle}}</h2>
-      <hr />
-    </div>
-
-
-
-    <!--activity list-->
-    <div class="activity-list">
-      <ul>
-        <a ng-repeat="activity in activities" ng-href="{{activity.link}}" target="blank">
-          <li>
-            <p><strong>{{trust(activity.title)}}</strong><br />{{trust(activity.dateorinfo)}}</p>
-          </li>
-        </a>
+          </div>
+          <div class="blurbs">
+            <a ng-href="{{article.link}}" target="blank">
+              <p>{{article.description}}</p>
+            </a>
+          </div>
+        </li>
       </ul>
+
+      <ul class="rig mobile">
+        <li ng-repeat="article in articles | orderBy:'rowNumber':'reverse'">
+          <div class="feature-mobile">
+            <a ng-href="{{article.link}}" target="blank">
+              <img ng-src="{{article.imagelink}}" alt="{{article.description}}" />
+              <p>{{article.description}}</p>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+
     </div>
   </section>
 
 
-  <!--contact shit-->
-  <a id="contact" />
-  <section class="contact">
-    <div class="contact-box">
-      <h2>CONTACT</h2>
-      <hr />
-    </div>
 
 
-    <footer>
-      <ul class="contact-lens">
-        <li><a class="fa fa-paper-plane" ng-href="mailto:{{globalData.email}}?subject=Site Missive"></a></li>
-        <li><a class="fa fa-twitter" ng-href="https://twitter.com/{{globalData.twittername}}" target="blank"></a></li>
-        <li><a class="fa fa-line-chart" ng-href="http://realtimebitcoin.info" target="blank"></a></li>
-        <li><a class="fa fa-jpy" ng-href="https://www.youtube.com/watch?v=d8hgSgkkckU" target="blank"></a></li>
-        <li><a class="fa fa-user-md" ng-href="http://www.innerhealthstudio.com/meditation-scripts.html" target="blank"></a></li>
-        <li><a class="fa fa-credit-card" ng-href="https://www.youtube.com/watch?v=YCeQLeQiRP4" target="blank"></a></li>
-        <li><a class="fa fa-birthday-cake" ng-href="http://www.furrhappens.com/www.FurrHappens.com/Home.html" target="blank"></a></li>
-      </ul>
-  </footer>
-</section>
+
+    <!--section header-->
+    <section class="activities">
+      <div class="activity-box" id="activities">
+        <h2>{{globalData.activitiestitle}}</h2>
+        <hr />
+      </div>
+
+
+
+      <!--activity list-->
+      <div class="activity-list">
+        <ul>
+          <a ng-repeat="activity in activities" ng-href="{{activity.link}}" target="blank">
+            <li>
+              <p><strong>{{trust(activity.title)}}</strong><br />{{trust(activity.dateorinfo)}}</p>
+            </li>
+          </a>
+        </ul>
+      </div>
+    </section>
+
+
+    <!--contact shit-->
+    <a id="contact" />
+    <section class="contact">
+      <div class="contact-box">
+        <h2>CONTACT</h2>
+        <hr />
+      </div>
+
+
+      <footer>
+        <ul class="contact-lens">
+          <li><a class="fa fa-paper-plane" ng-href="mailto:{{globalData.email}}?subject=Site Missive"></a></li>
+          <li><a class="fa fa-twitter" ng-href="https://twitter.com/{{globalData.twittername}}" target="blank"></a></li>
+          <li><a class="fa fa-line-chart" ng-href="http://realtimebitcoin.info" target="blank"></a></li>
+          <li><a class="fa fa-jpy" ng-href="https://www.youtube.com/watch?v=d8hgSgkkckU" target="blank"></a></li>
+          <li><a class="fa fa-user-md" ng-href="http://www.innerhealthstudio.com/meditation-scripts.html" target="blank"></a></li>
+          <li><a class="fa fa-credit-card" ng-href="https://www.youtube.com/watch?v=YCeQLeQiRP4" target="blank"></a></li>
+          <li><a class="fa fa-birthday-cake" ng-href="http://www.furrhappens.com/www.FurrHappens.com/Home.html" target="blank"></a></li>
+        </ul>
+      </footer>
+    </section> <!--end contact-->
+  </section> <!--end body wrap-->
+</section><!--end container-->

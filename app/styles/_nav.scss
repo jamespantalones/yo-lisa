@@ -29,7 +29,7 @@ nav {
 					font-weight: bold;
 					background: $purple;
 					padding: 10px;
-					box-shadow: 1px 3px 8px black;
+					@include smallboxy();
 					&:hover{
 						border-bottom: none;
 						@include transform(translateX(1px) translateY(1px));

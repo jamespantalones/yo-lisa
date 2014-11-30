@@ -1,9 +1,17 @@
 $main: #fffff1;
-$purple: #ce73e7;
+$purple: rgba(215,170,250,1);
+$purpletrans: rgba(215,170,250,0.9);
 $pink:#ff52c7;
 $gray: #ededed;
 $whitegray: #FDFAF8;
 
+
+
 $phone: 667px;
 $tab: 1024px;
 $mini: 470px;
+
+
+@mixin smallboxy(){
+	box-shadow: 1px 0px 1px black, 0px 1px 0px black, 2px 1px 0px black, 1px 2px 0px black, 3px 2px 0px black, 2px 3px 0px black, 4px 3px 0px black, 3px 4px 0px black;
+}

@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
 
 html{
@@ -16,7 +17,7 @@ body {
 	border: 0;
 	width: 100%;
 	height: 100%;
-	font-family:'Karla', 'Trebuchet MS', Arial, serif; 
+	font-family:'Trebuchet MS', 'Karla', Arial, serif; 
 }
 
 img { 
@@ -28,6 +29,7 @@ img {
 
 p{
 	color: black;
+	font-family:'Noto Serif', Georgia, serif;
 }
 
 a {
@@ -37,7 +39,7 @@ a {
 }
 
 strong{
-	font-family:'Karla', 'Trebuchet MS', Arial, sans-serif; 
+	font-family: 'Trebuchet MS', 'Karla', Arial, sans-serif; 
 	font-weight:bold; 
 	font-style:normal;
 }
@@ -45,7 +47,8 @@ strong{
 
 /* All Headings */
 h1, h2, h3, h4, h5, h6 {
-	font-family:'Karla', 'Trebuchet MS', Arial, sans-serif;
+	font-family:'Trebuchet MS', 'Karla', Arial, sans-serif !important;
+	font-weight: lighter;
 	line-height: 1;
 	margin-bottom: 0;
 }
@@ -75,6 +78,7 @@ hr{
 
 big{
 	font-size: 1.1em;
+	font-family:'Noto Serif', Georgia, serif;
 }
 
 

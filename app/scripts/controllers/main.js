@@ -8,7 +8,7 @@
  * # MainCtrl
  * Controller of the yoLisaApp
  */
-angular.module('yoLisaApp').controller('MainCtrl', ['$scope', '$sce', function ($scope, $sce) {
+angular.module('yoLisaApp').controller('MainCtrl', ['$scope', '$sce', '$interval', function ($scope, $sce, $interval) {
 
 
 	$scope.articles = [];
@@ -19,23 +19,35 @@ angular.module('yoLisaApp').controller('MainCtrl', ['$scope', '$sce', function (
 
 
 
-	Tabletop.init({
-		key: '1sNdUNoHAZTbueB3AhM-wdinCnL-nnI4OocCJn6hecTM',
-		callback: function(data){
-			console.log(data);
-			//outside of angular digest, hence apply
-			$scope.$apply(function(){
-				$scope.articles = data.Features.elements;
-				$scope.activities = data.Activities.elements;
-				$scope.navItems = data.Nav.elements;
-				$scope.globalData = data.GlobalInfo.elements[0];
+	//set init on interval and cancel on callback
+	var init = $interval(function(){
+		console.log('init');
+		tabletop();
+	}, 5000);
 
 
-				$scope.ready = true;
-			});
-			
-		}
-	});
+	function tabletop(){
+		Tabletop.init({
+			key: '1sNdUNoHAZTbueB3AhM-wdinCnL-nnI4OocCJn6hecTM',
+			callback: function(data){
+				$interval.cancel(init);
+				//outside of angular digest, hence apply
+				$scope.$apply(function(){
+					$scope.articles = data.Features.elements;
+					$scope.activities = data.Activities.elements;
+					$scope.navItems = data.Nav.elements;
+					$scope.globalData = data.GlobalInfo.elements[0];
+					$scope.ready = true;
+				});
+				
+			}
+		});
+	}
+
+
+	//initial tabletop call
+	tabletop();
+	
 
 	$scope.trust = function(body){
 		return $sce.trustAsHtml(body);

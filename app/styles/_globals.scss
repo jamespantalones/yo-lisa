@@ -89,11 +89,19 @@ big{
 	top: 0;
 	left: 0;
 	text-align: center;
-	h1{
-		text-align: center;
-		margin-top: 20%;
-		font-size: 5em;
-		color: black;
+	.spinner-icon{
+		position: absolute;
 		display: block;
+		top: 50%;
+		left: 50%;
+		@include transform(translate (-50%, -50%));
+		h1{
+			text-align: center;
+			font-size: 5em;
+			color: black;
+			margin: 0;
+			line-height: 0;
+		}
+
 	}
 }

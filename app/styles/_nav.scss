@@ -39,9 +39,9 @@ nav {
 				}
 			}
 		}
-		@media (max-width: $phone){
+	}
+	@media (max-width: $phone){
 			display: none;
 		}
-	}
 }
 

@@ -1,6 +1,8 @@
 <!--spinner-->
 <section class="loading" ng-show="!ready">
-  <h1 class="fa fa-circle-o-notch fa-spin"></h1>
+  <div class="spinner-icon">
+    <h1 class="fa fa-circle-o-notch fa-spin"></h1>
+  </div>
 </section>
 
 
@@ -21,11 +23,13 @@
   <!--header section-->
   <section class="header-wrap">
     <header id="home">
-      <a href="#features" du-smooth-scroll offset="100">
-        <img id="test" src="images/lisa-blanning.jpg" />
-      </a>
-      <p class="byline">{{globalData.byline}}</p>
-      <big>{{globalData.cities}}</big>
+      <div class="header-container">
+        <a href="#features" du-smooth-scroll offset="100">
+          <img id="test" src="images/lisa-blanning.jpg" />
+        </a>
+        <p class="byline">{{globalData.byline}}</p>
+        <big>{{globalData.cities}}</big>
+    </div>
     </header>
   </section>
 
@@ -36,7 +40,7 @@
     <section class="features" id="features">
       <div class="feature-box">
         <h2>{{globalData.featuretitle}}</h2>
-        <p>{{globalData.featurebyline}}</p>
+        <p class="feature-byline">{{globalData.featurebyline}}</p>
         <hr />
       </div>
 
@@ -113,7 +117,6 @@
           <li><a class="fa fa-twitter" ng-href="https://twitter.com/{{globalData.twittername}}" target="blank"></a></li>
           <li><a class="fa fa-line-chart" ng-href="http://realtimebitcoin.info" target="blank"></a></li>
           <li><a class="fa fa-jpy" ng-href="https://www.youtube.com/watch?v=d8hgSgkkckU" target="blank"></a></li>
-          <li><a class="fa fa-user-md" ng-href="http://www.innerhealthstudio.com/meditation-scripts.html" target="blank"></a></li>
           <li><a class="fa fa-credit-card" ng-href="https://www.youtube.com/watch?v=YCeQLeQiRP4" target="blank"></a></li>
           <li><a class="fa fa-birthday-cake" ng-href="http://www.furrhappens.com/www.FurrHappens.com/Home.html" target="blank"></a></li>
         </ul>

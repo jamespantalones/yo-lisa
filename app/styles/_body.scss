@@ -310,6 +310,17 @@ footer{
 			}
 		}
 	}
+	p.credit{
+		font-size: 0.6em;
+		text-align: right;
+		margin: 0 auto;
+		font-family: 'Trebuchet MS', 'Karla', arial, sans-serif;
+		a{
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
 }
 
 

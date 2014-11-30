@@ -20,7 +20,10 @@ nav {
 			border-bottom: none;
 			@include transform(translateX(1px) translateY(1px));
 			box-shadow: 1px 1px 2px black;
-		}	
+		}
+		@media (max-width: $tab){
+			font-size: 0.6em;
+		}
 	}
 	ul{
 		width: 100%;
@@ -32,6 +35,9 @@ nav {
 			padding: 0 5%;
 			text-transform: uppercase;
 			margin-top: 10px;
+			@media (max-width: $tab){
+				font-size: 0.6em;
+			}
 			a{
 				display: inline-block;
 				text-decoration: none;

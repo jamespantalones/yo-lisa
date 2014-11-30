@@ -177,7 +177,7 @@ header{
 					left: 0;
 					position: absolute;
 					z-index: 3;
-					background-color: $purpletrans;
+					background-color: rgba(0,0,0,0.7);
 					@include transition(all .1s linear);
 					.blurb-info-container{
 						width: 100%;

@@ -3,28 +3,12 @@ nav {
 	z-index: 9999;
 	width: 100%;
 	height: 30px;
+	margin-top: 0;
 	top: 0;
 	left: 0;
 	position: fixed;
 	background: $main;
 	@include background(linear-gradient(rgba(255,252,244,1), rgba(255,252,244,0)));
-	.logo{
-		position: fixed;
-		top: 15px;
-		left: 20px;
-		font-weight: bold;
-		background: $purple;
-		padding: 10px;
-		@include smallboxy();
-		&:hover{
-			border-bottom: none;
-			@include transform(translateX(1px) translateY(1px));
-			box-shadow: 1px 1px 2px black;
-		}
-		@media (max-width: $tab){
-			font-size: 0.6em;
-		}
-	}
 	ul{
 		width: 100%;
 		text-align: center;
@@ -32,9 +16,8 @@ nav {
 
 		li{
 			display: inline-block;
-			padding: 0 3%;
+			padding: 0 5%;
 			text-transform: uppercase;
-			margin-top: 10px;
 			@media (max-width: $tab){
 				font-size: 0.6em;
 			}
@@ -48,6 +31,24 @@ nav {
 				text-align: center;
 				&:hover{
 					border-bottom: 3px solid black;
+				}
+			}
+			&.logo{
+				font-weight: bold !important;
+				background: $purple;
+				padding: 15px 30px;
+				@include transition(all .2s linear);
+				&:hover{
+					background: $pink;
+				}
+				a{
+					&:hover{
+						border-bottom: none;
+					}
+				}
+				
+				@media (max-width: $tab){
+					font-size: 0.6em;
 				}
 			}
 		}

@@ -8,6 +8,7 @@ nav {
 	left: 0;
 	position: fixed;
 	background: $main;
+	@include fast();
 	@include background(linear-gradient(rgba(255,252,244,1), rgba(255,252,244,0)));
 	ul{
 		width: 100%;

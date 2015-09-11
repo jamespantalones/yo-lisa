@@ -5,8 +5,8 @@
 	width: 100%;
 	max-width: 100%;
 	height: 100%;
-	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow: hidden;
+	overflow-y: auto;
 	@include fast();
 	-webkit-overflow-scrolling: touch;
 }
@@ -18,7 +18,6 @@
 	top: 0;
 	left: 0;
 	overflow: hidden;
-	overflow-y: scroll;
 }
 
 
@@ -62,7 +61,6 @@ header{
 	height: auto;
 	position: relative;
 	left: 0;
-	overflow-y: scroll;
 }
 
 

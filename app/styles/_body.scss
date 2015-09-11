@@ -262,9 +262,9 @@ header{
 			margin-top: 10px;
 			padding: 0px 10px;
 			-webkit-backface-visibility: hidden;
-			@include smallboxy();
+			// @include smallboxy();
 			// box-shadow: 1px 3px 8px black;
-			@include transition(all .2s ease-in-out);
+			@include transition(all .1s ease-in-out);
 			@media (max-width: $phone){
 				font-size: 1em;
 			}
@@ -278,8 +278,8 @@ header{
 			&:hover{
 				background-color: $purple;
 				color: black;
-				@include transform(translateX(1px) translateY(1px));
-				box-shadow: 1px 1px 2px black;
+				// @include transform(translateX(1px) translateY(1px));
+				// box-shadow: 1px 1px 2px black;
 			}
 		}
 	}
